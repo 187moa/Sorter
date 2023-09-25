@@ -42,7 +42,7 @@ public class Sorter {
             array[i + 1] = key;
         }
     }
-    public static void sort(int[] arr){
+    public static void sort(int[]  arr){
         insertionSort(arr);
     }
 }
