@@ -2,13 +2,14 @@ import java.util.Arrays;
 
 public class Sorter {
     public static void main(String[] args) {
-        int[] data = { 20, 12, 10, 15, 2 };
-        selectionSort(data);
-
-        System.out.println("Sorted Array in Ascending Order: ");
+        System.out.println("hala");
+        int[] data = {20, 12, 10, 15, 2};
+        insertionSort(data);
         System.out.println(Arrays.toString(data));
+
     }
-    public static void selectionSort(int[] array) {
+
+    public static void selectionSort(int array[]) {
         int size = array.length;
 
         for (int step = 0; step < size - 1; step++) {
@@ -28,5 +29,22 @@ public class Sorter {
             array[step] = array[min_idx];
             array[min_idx] = temp;
         }
+    }
+
+    public static void insertionSort(int[] array) {
+        int n = array.length;
+        for (int j = 1; j < n; j++) {
+            int key = array[j];
+            int i = j - 1;
+            while ((i > -1) && (array[i] > key)) {
+                array[i + 1] = array[i];
+                i--;
+            }
+            array[i + 1] = key;
+        }
+    }
+
+    public static void sort(int[] arr) {
+        insertionSort(arr);
     }
 }
