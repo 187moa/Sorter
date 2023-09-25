@@ -3,12 +3,11 @@ import java.util.Arrays;
 public class Sorter {
     public static void main(String[] args) {
         System.out.println("hala");
-        int[] data = {20, 12, 10, 15, 2};
+        int[] data ={20, 12, 10, 15,2 };
         insertionSort(data);
         System.out.println(Arrays.toString(data));
 
     }
-
     public static void selectionSort(int array[]) {
         int size = array.length;
 
@@ -43,8 +42,7 @@ public class Sorter {
             array[i + 1] = key;
         }
     }
-
-    public static void sort(int[] arr) {
+    public static void sort(int[] arr){
         insertionSort(arr);
     }
 }
